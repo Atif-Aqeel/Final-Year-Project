@@ -1,0 +1,10 @@
+Email -> validate
+Password -> min 6
+First Name -> min 1
+Last Name-> min 1
+Institute Name-> min 1
+Class Name->min 1
+Gender->[MALE,FEMALE]
+Dob -> date
+Roll No-> min1
+Staff ID-> min 1
