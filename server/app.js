@@ -11,6 +11,7 @@ const { MONGOURI } = require('./config/keys')
 const PORT = process.env.PORT || 3344
 const app = express()
 
+
 app.use(bodyParser.json())
 
 app.use((req, res, next) => {
@@ -61,3 +62,4 @@ mongoose.connect(MONGOURI,
 
 console.log(`connected! at post ${PORT}`)
 app.listen(PORT)
+
