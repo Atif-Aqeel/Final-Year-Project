@@ -1,0 +1,93 @@
+.sidebar {
+
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  z-index: 1000;
+
+  height: calc(100vh - #{$header-height});
+  width: 20%;
+
+  background-color: $color-bg;
+
+  padding: 3rem;
+
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+
+  .sidebarItem {
+
+    width: 100%;
+    margin-bottom: 1rem;
+
+    &__name{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.7rem;
+      font-weight: bold;
+      cursor: pointer;
+
+      .arrow{
+        width: 0;
+        height: 0;
+        border-top: 0.6rem solid transparent;
+        border-bottom: 0.6rem solid transparent;
+
+        border-left: 0.6rem solid $color-primary;
+
+        transition: all 0.15s ease-in-out;
+      }
+
+      .rotateArrow{
+        transform: rotate(90deg);
+      }
+
+    }
+
+    &__options{
+
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.2s ease-in-out;
+
+      a{
+        margin: 0.35rem 0;
+        display: block;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+
+      .active{
+        color: $color-secondary-dark;
+        font-weight: bold;
+      }
+
+
+    }
+
+    .showOption{
+      max-height: 100vh;
+    }
+
+  }
+
+
+
+}

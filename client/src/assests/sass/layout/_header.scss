@@ -1,0 +1,175 @@
+.header {
+  border: 1px solid black;
+
+
+  width: 100%;
+  background-color: $color-primary;
+  height: $header-height;
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+
+  &__logo {
+    height: 4rem;
+
+  }
+
+
+  &__nav {
+
+    display: flex;
+
+
+    &__profile {
+
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+
+      &__imgCont {
+        width: 4.5rem;
+        height: 4.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 100%;
+        cursor: pointer;
+
+        img {
+          border-radius: 100%;
+          object-fit: cover;
+        }
+      }
+
+
+      &__popup {
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        background-color: white;
+
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+
+        font-size: 1.7rem;
+        display: flex;
+        flex-flow: column;
+        white-space: pre;
+        min-width: 15rem;
+
+
+        transform: scaleY(1);
+        transform-origin: top;
+        transition: all 0.2s ease-in-out;
+
+        &__header {
+          color: $color-secondary-dark;
+          padding: 0.4rem 0;
+          border-bottom: 1px solid $color-light;
+        }
+
+        &__option {
+
+          margin: 1rem 0 0;
+          padding: 0.15rem 0;
+          display: block;
+
+        }
+
+      }
+
+
+      .hidePopup {
+        transform: scaleY(0);
+      }
+
+
+    }
+
+
+  }
+
+
+}
+
+
+.hideNav {
+
+  @media (max-width: 760px) {
+    transform: scaleY(0);
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    position: absolute;
+  }
+
+}
+
+
+.hamburgerMenu {
+  transition: all 0.2s ease-in-out;
+
+  margin: 0 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  width: 3rem;
+  height: 2.5rem;
+
+  div {
+    width: 100%;
+    height: 2px;
+    background-color: $color-primary;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  @media (min-width: 760px) {
+    display: none;
+
+  }
+
+}
+
+
+.makeCross {
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 760px) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+
+    & > :nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    & > :nth-child(2) {
+      transform: rotate(-45deg) translate(1px, -1px);
+    }
+
+    & > :nth-child(3) {
+      transform: rotate(-45deg) translate(2.5px, -2.5px);
+    }
+
+  }
+}
