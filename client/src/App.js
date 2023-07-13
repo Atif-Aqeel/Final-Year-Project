@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import "assests/sass/main.scss";
 
 import Header from "components/ui/Header";
-
 import Signup from "pages/Signup";
 import Login from "pages/Login";
 import SetPassword from "pages/SetPassword";
